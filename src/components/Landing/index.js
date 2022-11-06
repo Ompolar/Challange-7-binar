@@ -12,7 +12,7 @@ function Landing(){
                         <div className="col">
                             <h1 className="fw-bolder">Sewa Rental Mobil Terbaik di Kawasan Surabaya</h1>
                             <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
-                            <a className="btn btn-success text-light" href="cars">Mulai Sewa Mobil</a>
+                            <a className="btn btn-success text-light" href="formcars">Mulai Sewa Mobil</a>
                         </div>
                         <div className="col-lg">
                             <img src="images/mobil.png" alt="" className="img-fluid"/>
