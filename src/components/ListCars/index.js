@@ -2,6 +2,20 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getListCars } from '../../actions/carsAction';
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function dateTime(hasil){
+    const isPositive = getRandomInt(0, 1) === 1;
+    const timeAt = new Date();
+    const mutator = getRandomInt(1000000, 100000000);
+    const hasil = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator))
+    return hasil
+}
+
 function ListCars() {
     const {getListCarsResult,getListCarsLoading,getListCarsError} = useSelector((state)=>state.CarsReducer)
     const dispatch = useDispatch();
