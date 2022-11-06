@@ -53,11 +53,12 @@ const Navbar = () => {
                                 </li>
                                 <li className="nav-item">
                                 {showButton ? (
-                                    <a className="btn btn-success text-light" href="/login">Register</a>
+                                    // tidak membuat backend googleAuth
+                                    // <a className="btn btn-success text-light" href="/login">Login</a>
+                                    <a className="btn btn-success text-light" href="/formcars">Login</a>
                                 ) : (
                                     <a key={"logout"} className="btn btn-danger text-light" href="/login" onClick={handleLogout}>Logout</a>
                                 )}
-                                <a className="btn btn-success text-light" aria-current="page" href="#">Register</a>
                                 </li>
                             </ul>
                         </div>
