@@ -34,7 +34,7 @@ function ListCars({submit, data, jml, driveroption, tgl, wkt}) {
     }, [dispatch])
 
     return (
-        <div className="container card-cars">
+        <>
             {getListCarsResult ? (
                 getListCarsResult.filter((cars)=>cars.capacity >= jumlah && cars.available === tipe && Date.parse(dateTime(cars.availableAt)) > formdate).map((cars) =>{
                     return(
@@ -58,7 +58,7 @@ function ListCars({submit, data, jml, driveroption, tgl, wkt}) {
             ) : (
                 <p>{getListCarsError ? getListCarsError : "Data Kosong"}</p>
             )}
-        </div>
+        </>
     )
 }
 
