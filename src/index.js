@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { FormCars, Landing, Login } from './components';
 import {createStore, compose, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
@@ -16,7 +17,15 @@ root.render(
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          
+          <Route path='/' element={
+            <Landing/>
+          }></Route>
+          <Route path='/login' element={
+            <Login/>
+          }></Route>
+          <Route path='/formcars' element={
+            <FormCars/>
+          }></Route>
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { React, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getListCars } from '../../actions/carsAction';
 
@@ -12,7 +12,7 @@ function dateTime(hasil){
     const isPositive = getRandomInt(0, 1) === 1;
     const timeAt = new Date();
     const mutator = getRandomInt(1000000, 100000000);
-    const hasil = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator))
+    hasil = new Date(timeAt.getTime() + (isPositive ? mutator : -1 * mutator))
     return hasil
 }
 
@@ -40,11 +40,11 @@ function ListCars({submit, data, jml, driveroption, tgl, wkt}) {
                     return(
                         // <p key={cars.id}>{cars.manufacture} - {cars.model}</p>
                         <div className="card mb-3">
-                            <img src="${cars.image}" className="card-img" height="300" alt="${cars.manufacture}"/>
+                            <img src="{cars.image}" className="card-img" height="300" alt="{cars.manufacture}"/>
                             <div className="card-body">
-                                <div className="card-text">${cars.model}</div>
+                                <div className="card-text">{cars.model}</div>
                                 <h5 className="card-title">${cars.rentPerDay} /Hari</h5>
-                                <p className="card-text">${cars.description}</p>
+                                <p className="card-text">{cars.description}</p>
                                 <p className="card-text"><img src="images/user.png" alt="" width="20px" height="20px"/> ${cars.capacity}</p>
                                 <p className="card-text"><img src="images/setting.png" alt="" width="20px" height="20px"/> ${cars.transmission}</p>
                                 <p className="card-text"><img src="images/calendar.png" alt="" width="20px" height="20px"/> ${cars.year}</p>

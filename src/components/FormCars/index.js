@@ -1,7 +1,7 @@
 import * as React from 'react';
-import NavBar from './NavBar';
-import ListCars from './ListCars';
-import Footer from './Footer';
+import NavBar from '../NavBar';
+import ListCars from '../ListCars';
+import Footer from '../Footer';
   
 class FormCars extends React.Component{
     constructor(pros) {

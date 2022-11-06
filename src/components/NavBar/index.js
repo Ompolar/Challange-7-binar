@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { React, useEffect, useState } from "react"
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -53,6 +52,11 @@ const Navbar = () => {
                                 <a className="nav-link active" aria-current="page" href="#faq">FAQ</a>
                                 </li>
                                 <li className="nav-item">
+                                {showButton ? (
+                                    <a className="btn btn-success text-light" href="/login">Register</a>
+                                ) : (
+                                    <a key={"logout"} className="btn btn-danger text-light" href="/login" onClick={handleLogout}>Logout</a>
+                                )}
                                 <a className="btn btn-success text-light" aria-current="page" href="#">Register</a>
                                 </li>
                             </ul>

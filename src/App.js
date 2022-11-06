@@ -1,13 +1,10 @@
-import { ListCars } from "./components"
-import './App.css';
+import Landing from "./components";
 
 function App() {
   return (
-    <div>
-      <h2>BCR</h2>
-      <hr />
-      <ListCars />
-    </div>
+    <>
+      <Landing/>
+    </>
   );
 }
 
