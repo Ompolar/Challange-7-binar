@@ -1,6 +1,30 @@
-import React from 'react';
+import * as React from 'react';
+import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-function Navbar(){
+const Navbar = () => {
+    const navigate = useNavigate();
+
+    function handleLogout(e) {
+        localStorage.removeItem("token");
+        navigate('/login')
+    }
+
+    const location = useLocation()
+    const [showButton, setShowButton] = useState()
+
+    useEffect(() => {
+        if (location.pathname === "/cars") {
+            setShowButton(false);
+        } 
+        else if (location.key === "logout" && location.pathname === "/login") {
+            setShowButton(false);
+        } 
+        else {
+            setShowButton(true);
+        }
+    }, [location.pathname]);
+
     return(
         <div className="container">
             <nav className="navbar navbar-expand-lg bg-light">

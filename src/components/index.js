@@ -1,8 +1,6 @@
 import ListCars from './ListCars'
-import Header from './Header'
-import Navbar from './NavBar'
 import Landing from './Landing'
-import ListCars from './ListCars'
-import Footer from './Footer'
+import FormCars from './FormCars'
+import Protected from './Protected'
 
-export { ListCars, Header, Navbar, Landing, ListCars, Footer }
+export { ListCars, Landing, FormCars, Protected }

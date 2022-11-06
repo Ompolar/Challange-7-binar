@@ -1,5 +1,7 @@
 import * as React from 'react';
+import NavBar from './NavBar';
 import ListCars from './ListCars';
+import Footer from './Footer';
   
 class FormCars extends React.Component{
     constructor(pros) {
@@ -37,6 +39,7 @@ class FormCars extends React.Component{
     render(){
         return(
             <>
+                <NavBar/>
                 <div className="row">
                     <div className="col">
                         <h1 className="fw-bolder">Sewa Rental Mobil Terbaik di Kawasan Surabaya</h1>
@@ -82,6 +85,7 @@ class FormCars extends React.Component{
                     </div>
                 </div>
                 <ListCars submit={this.handleSubmit} data={this.data} jml={this.state.jml} driveroption={this.state.driveroption} tgl={this.state.tgl} wkt={this.state.wkt}/>
+                <Footer/>
             </>
       )
   }
